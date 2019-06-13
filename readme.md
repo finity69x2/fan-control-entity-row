@@ -1,6 +1,6 @@
 This is an element to add a fan control row to Home Assistant.
 
-it uses the code that can be found in my fan control package @ https://github.com/finity69x2/Home-Assistant/blob/master/packages/fan_package.yaml
+It uses the code that can be found in my fan control package @ https://github.com/finity69x2/Home-Assistant/blob/master/packages/fan_package.yaml
 
 Installation:
 
