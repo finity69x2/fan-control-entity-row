@@ -1,3 +1,9 @@
+This is an element to add a fan control row to Home Assistant.
+
+it uses the code tht can be found in my fan control package @ https://github.com/finity69x2/Home-Assistant/blob/master/packages/fan_package.yaml
+
+Installation:
+
 Copy the fan-control-entity-row.js file to the appropriate folder in your Home Assistant Configuration directory (/config/www/).
 
 Place the following in your "resources" section in your lovelace configuration (updating the localation to where you placed the above file):
