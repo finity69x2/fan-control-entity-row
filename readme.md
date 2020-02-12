@@ -24,6 +24,7 @@ Then to use this in a card place the following in your entity card:
 | type | String | Yes | none | custom:fan-control-entity-row |
 | name | String | No | none | A custom name for the entity in the row |
 | customTheme | Boolean | No | false | set to true to use a custom theme |
+| sensStateWithSpeed | Boolean | No | false | Used only for certain firmware that requires the Statre command be sent with the speed command  |
 | customIsOffColor | String | No | '#f44c09' | Sets the color of the 'Off' button if fan is off |
 | customIsOnLowColor | String | No | '#43A047' | Sets the color of the 'Low' button if fan is on low |
 | customIsOnMedColor | String | No | '#43A047' | Sets the color of the 'Med' button if fan is on Medium |
@@ -32,6 +33,8 @@ Then to use this in a card place the following in your entity card:
 
 
 The values for the colors can be any valid color string in "HEX", "RGB" or by color name.
+
+The optional "sendStateWithSpeed" config entry is only needed to be set to true if for some reason your fan needs the state command of "on" to be sent along with the desired speed command. As far as I know this is only needed for use with fans flashed with the ESPHome Firmware.
 
 <b>Comfguration Examples:</b>
     
@@ -61,6 +64,11 @@ The values for the colors can be any valid color string in "HEX", "RGB" or by co
             customIsOnHiColor: '#222222'
             customIsOffSpdColor: '#aaaaaa'
             customIsOffColor: 'purple'
+        ## USE THIS CONFIG FOR USE WITH THE ESPHOME FIRMWARE (ALONG WITHE THE THEME SETTING ABOVE IF DESIRED)
+          - entity: fan.master_bedroom_fan
+            type: custom:fan-control-entity-row
+            name: MBR Fan Not Custom
+            sendStateWithSpeed: true
   ```
 
 This is with the default Lovelace frontend theme set:
