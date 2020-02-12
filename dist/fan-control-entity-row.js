@@ -80,6 +80,7 @@ class CustomFanRow extends Polymer.Element {
 		
 	this._config = {
             customTheme: false,
+	    sendStateWithSpeed: false,
 	    customIsOffColor: '#f44c09',
 	    customIsOnLowColor: '#43A047',
 	    customIsOnMedColor: '#43A047',
@@ -94,6 +95,7 @@ class CustomFanRow extends Polymer.Element {
         const config = this._config;
         const stateObj = hass.states[config.entity];
 	const custTheme = config.customTheme;
+	const sendStateWithSpeed = config.sendStateWithSpeed;
 	const custOnLowClr = config.customIsOnLowColor;
 	const custOnMedClr = config.customIsOnMedColor;
 	const custOnHiClr = config.customIsOnHiColor;
@@ -206,7 +208,9 @@ class CustomFanRow extends Polymer.Element {
 		this.hass.callService('fan', 'turn_off', {entity_id: this._config.entity});
 	} else {
 		this.hass.callService('fan', 'set_speed', {entity_id: this._config.entity, speed: speed});
-		this.hass.callService('fan', 'turn_on', {entity_id: this._config.entity});
+		if(this._config.sendStateWithSpeed){
+		    this.hass.callService('fan', 'turn_on', {entity_id: this._config.entity});
+		}
 	}
     }
 
