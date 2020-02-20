@@ -202,17 +202,19 @@ class CustomFanRow extends Polymer.Element {
         e.stopPropagation();
     }
 
-    setSpeed(e) {
+        setSpeed(e) {
         const speed = e.currentTarget.getAttribute('name');
         if( speed == 'off' ){
-		this.hass.callService('fan', 'turn_off', {entity_id: this._config.entity});
-	} else {
-		this.hass.callService('fan', 'set_speed', {entity_id: this._config.entity, speed: speed});
-		if(this._config.sendStateWithSpeed){
+		  this.hass.callService('fan', 'turn_off', {entity_id: this._config.entity});
+	    } else {
+		  if(this._config.sendStateWithSpeed){
 		    this.hass.callService('fan', 'turn_on', {entity_id: this._config.entity});
-		}
-	}
+		  }
+		  this.hass.callService('fan', 'set_speed', {entity_id: this._config.entity, speed: speed});
+	    }
     }
+
+}
 
 }
 	
