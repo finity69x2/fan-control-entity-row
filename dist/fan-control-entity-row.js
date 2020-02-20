@@ -63,16 +63,16 @@ class CustomFanRow extends Polymer.Element {
             },
                 _config: Object,
                 _stateObj: Object,
-		_lowOnColor: String,
-		_medOnColor: String,
-		_highOnColor: String,
-		_offColor: String,
-		_isOffState: Boolean,
+				_lowOnColor: String,
+				_medOnColor: String,
+				_highOnColor: String,
+				_offColor: String,
+				_isOffState: Boolean,
             	_isOnState: Boolean,
             	_isOnLow: Boolean,
-           	 _isOnMed: Boolean,
+				_isOnMed: Boolean,
             	_isOnHigh: Boolean,
-	}
+		}
     }
 
     setConfig(config) {
@@ -80,12 +80,12 @@ class CustomFanRow extends Polymer.Element {
 		
 	this._config = {
             customTheme: false,
-	    sendStateWithSpeed: false,
-	    customIsOffColor: '#f44c09',
-	    customIsOnLowColor: '#43A047',
-	    customIsOnMedColor: '#43A047',
-	    customIsOnHiColor: '#43A047',
-	    customIsOffSpdColor: '#759aaa',
+			sendStateWithSpeed: false,
+			customIsOffColor: '#f44c09',
+			customIsOnLowColor: '#43A047',
+			customIsOnMedColor: '#43A047',
+			customIsOnHiColor: '#43A047',
+			customIsOffSpdColor: '#759aaa',
             ...config
         };
     }
@@ -94,13 +94,13 @@ class CustomFanRow extends Polymer.Element {
 
         const config = this._config;
         const stateObj = hass.states[config.entity];
-	const custTheme = config.customTheme;
-	const sendStateWithSpeed = config.sendStateWithSpeed;
-	const custOnLowClr = config.customIsOnLowColor;
-	const custOnMedClr = config.customIsOnMedColor;
-	const custOnHiClr = config.customIsOnHiColor;
-	const custOffSpdClr = config.customIsOffSpdColor;
-	const custOffClr = config.customIsOffColor;
+		const custTheme = config.customTheme;
+		const sendStateWithSpeed = config.sendStateWithSpeed;
+		const custOnLowClr = config.customIsOnLowColor;
+		const custOnMedClr = config.customIsOnMedColor;
+		const custOnHiClr = config.customIsOnHiColor;
+		const custOffSpdClr = config.customIsOffSpdColor;
+		const custOffClr = config.customIsOffColor;
 		
 						
 		
@@ -126,7 +126,7 @@ class CustomFanRow extends Polymer.Element {
 		}
 	}
 		
-        let lowcolor;
+    let lowcolor;
 	let medcolor;
 	let hicolor;
 	let offcolor;
@@ -160,35 +160,35 @@ class CustomFanRow extends Polymer.Element {
   	} else {
 
   		if (low == 'on') {
-			lowcolor = 'background-color: var(--switch-checked-color)';
+			lowcolor = 'background-color: var(--primary-color)';
 		} else {
-			lowcolor = 'background-color: var(--switch-unchecked-color)';
+			lowcolor = 'background-color: var(--disabled-text-color)';
 		}
 		
 		if (med == 'on') {
-			medcolor = 'background-color: var(--switch-checked-color)';
+			medcolor = 'background-color: var(--primary-color)';
 		} else {
-			medcolor = 'background-color: var(--switch-unchecked-color)';
+			medcolor = 'background-color: var(--disabled-text-color)';
 		}
 		
 		if (high == 'on') {
-			hicolor = 'background-color: var(--switch-checked-color)';
+			hicolor = 'background-color: var(--primary-color)';
 		} else {
-			hicolor = 'background-color: var(--switch-unchecked-color)';
+			hicolor = 'background-color: var(--disabled-text-color)';
 		}
 		
 		if (offstate == 'on') {
-			offcolor = 'background-color: var(--switch-checked-color)';
+			offcolor = 'background-color: var(--primary-color)';
 		} else {
-			offcolor = 'background-color: var(--switch-unchecked-color)';
+			offcolor = 'background-color: var(--disabled-text-color)';
 		}
 	}
 	
 			
 	this.setProperties({
-        	_stateObj: stateObj,
+        _stateObj: stateObj,
 		_isOffState: stateObj.state == 'off',
-        	_isOnLow: low === 'on',
+        _isOnLow: low === 'on',
 		_isOnMed: med === 'on',
 		_isOnHigh: high === 'on',
 		_lowOnColor: lowcolor,
@@ -202,7 +202,7 @@ class CustomFanRow extends Polymer.Element {
         e.stopPropagation();
     }
 
-        setSpeed(e) {
+    setSpeed(e) {
         const speed = e.currentTarget.getAttribute('name');
         if( speed == 'off' ){
 		  this.hass.callService('fan', 'turn_off', {entity_id: this._config.entity});
@@ -215,7 +215,6 @@ class CustomFanRow extends Polymer.Element {
     }
 
 }
-
-}
 	
 customElements.define('fan-control-entity-row', CustomFanRow);
+
