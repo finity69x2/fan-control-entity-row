@@ -76,9 +76,9 @@ class CustomFanRow extends Polymer.Element {
     }
 
     setConfig(config) {
-        this._config = config;
+        this.config = config;
 		
-	this._config = {
+	this.config = {
             customTheme: false,
 			sendStateWithSpeed: false,
 			customIsOffColor: '#f44c09',
@@ -86,13 +86,12 @@ class CustomFanRow extends Polymer.Element {
 			customIsOnMedColor: '#43A047',
 			customIsOnHiColor: '#43A047',
 			customIsOffSpdColor: '#759aaa',
-            ...config
         };
     }
 
     hassChanged(hass) {
 
-        const config = this._config;
+        const config = this.config;
         const stateObj = hass.states[config.entity];
 		const custTheme = config.customTheme;
 		const sendStateWithSpeed = config.sendStateWithSpeed;
@@ -205,12 +204,12 @@ class CustomFanRow extends Polymer.Element {
     setSpeed(e) {
         const speed = e.currentTarget.getAttribute('name');
         if( speed == 'off' ){
-		  this.hass.callService('fan', 'turn_off', {entity_id: this._config.entity});
+		  this.hass.callService('fan', 'turn_off', {entity_id: this.config.entity});
 	    } else {
 		  if(this._config.sendStateWithSpeed){
-		    this.hass.callService('fan', 'turn_on', {entity_id: this._config.entity});
+		    this.hass.callService('fan', 'turn_on', {entity_id: this.config.entity});
 		  }
-		  this.hass.callService('fan', 'set_speed', {entity_id: this._config.entity, speed: speed});
+		  this.hass.callService('fan', 'set_speed', {entity_id: this.config.entity, speed: speed});
 	    }
     }
 
