@@ -79,3 +79,7 @@ This is with the default Lovelace frontend theme set:
 This is with the "Slate" frontend theme set:
 
 ![Slate](slate_fan_ex.gif)
+
+This is how this plugin looks with the Light Brightness Preset & Binary Button Rows:
+
+![Slate-Compare](button-row-example-compare.gif)
