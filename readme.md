@@ -24,7 +24,7 @@ Then to use this in a card place the following in your entity card:
 | type | String | Yes | none | custom:fan-control-entity-row |
 | name | String | No | none | A custom name for the entity in the row |
 | customTheme | Boolean | No | false | set to true to use a custom theme |
-| sensStateWithSpeed | Boolean | No | false | Used only for certain firmware that requires the Statre command be sent with the speed command  |
+| sendStateWithSpeed | Boolean | No | false | Used only for certain firmware that requires the State command be sent with the Speed command  |
 | customIsOffColor | String | No | '#f44c09' | Sets the color of the 'Off' button if fan is off |
 | customIsOnLowColor | String | No | '#43A047' | Sets the color of the 'Low' button if fan is on low |
 | customIsOnMedColor | String | No | '#43A047' | Sets the color of the 'Med' button if fan is on Medium |
