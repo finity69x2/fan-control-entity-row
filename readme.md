@@ -1,6 +1,6 @@
-#Fan Control Entity Row
+# Fan Control Entity Row
 
-#This is an element to add a fan control row to Home Assistant.
+# This is an element to add a fan control row to Home Assistant.
 
 It uses the code that can be found in my fan control package @ https://github.com/finity69x2/Home-Assistant/blob/master/packages/fan_package.yaml
 
