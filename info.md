@@ -1,6 +1,6 @@
 Changes:
 
-- v1.2 - added the ability to customize the text for the buttons. defaults to "OFF, LOW, MED, HIGH"
+- v1.6 - added the ability to customize the text for the buttons. defaults to "OFF, LOW, MED, HIGH"
 
 This is an element to add a fan control row to Home Assistant for 3-speed fans.
 
