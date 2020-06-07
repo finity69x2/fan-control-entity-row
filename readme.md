@@ -38,6 +38,10 @@ Then to use this in a card place the following in your entity card:
 | customIsOnMedColor | String | No | '#43A047' | Sets the color of the 'Med' button if fan is on Medium |
 | customIsOnHiColor | String | No | '#43A047' | Sets the color of the 'Hi' button if fan is on high |
 | customIsOffSpdColor | String | No | '#759aaa' | Sets the color of the the buttons if that selection is off |
+| customOffText | String | No | 'OFF' | Sets the text of the "off" button |
+| customLowText | String | No | 'LOW' | Sets the text of the "low" speed button |
+| customMedText | String | No | 'MED' | Sets the text of the "medium" speed button |
+| customHiText | String | No | 'HIGH' | Sets the text of the "High" speed button |
 
 
 The values for the colors can be any valid color string in "HEX", "RGB" or by color name.
@@ -77,6 +81,14 @@ The optional "sendStateWithSpeed" config entry is only needed to be set to true 
             type: custom:fan-control-entity-row
             name: MBR Fan Not Custom
             sendStateWithSpeed: true
+        ## USE THIS CONFIG TO SET CUSTOM BUTTON TEXT (NOT REQUIRED TO SET "customTheme: true" TO USE THESE )
+          - entity: fan.sunroom_fan
+            type: custom:fan-control-entity-row
+            name: Sunroom Fan Custom Custom
+            customHiText: me
+            customLowText: do
+            customMedText: re
+            customOffText: not
   ```
 
 This is with the default Lovelace frontend theme set:
