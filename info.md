@@ -1,3 +1,7 @@
+Changes:
+
+- v1.2 - added the ability to customize the text for the buttons. defaults to "OFF, LOW, MED, HIGH"
+
 This is an element to add a fan control row to Home Assistant for 3-speed fans.
 
 It uses the code that can be found in my fan control package @ https://github.com/finity69x2/Home-Assistant/blob/master/packages/fan_package.yaml
@@ -28,8 +32,12 @@ Then to use this in a card place the following in your entity card:
 | customIsOffColor | String | No | '#f44c09' | Sets the color of the 'Off' button if fan is off |
 | customIsOnLowColor | String | No | '#43A047' | Sets the color of the 'Low' button if fan is on low |
 | customIsOnMedColor | String | No | '#43A047' | Sets the color of the 'Med' button if fan is on Medium |
-| customIsOnHiColor | String | No | '#43A047' | Sets the color of the 'Hi' button if fan is on high |
-| customIsOffSpdColor | String | No | '#759aaa' | Sets the color of the the buttons if that selection is off |
+| customIsOnHiColor | String | No | '#43A047' | Sets the color of the 'High' button if fan is on high |
+| customIsOffSpdColor | String | No | '#759aaa' | Sets the color of the buttons if that selection is off |
+| customOffText | String | No | 'OFF' | Sets the text of the "off" button |
+| customLowText | String | No | 'LOW' | Sets the text of the "low" speed button |
+| customMedText | String | No | 'MED' | Sets the text of the "medium" speed button |
+| customHiText | String | No | 'HIGH' | Sets the text of the "High" speed button |
 
 
 The values for the colors can be any valid color string in "HEX", "RGB" or by color name.
@@ -69,6 +77,14 @@ The optional "sendStateWithSpeed" config entry is only needed to be set to true 
             type: custom:fan-control-entity-row
             name: MBR Fan Not Custom
             sendStateWithSpeed: true
+        ## USE THIS CONFIG TO SET CUSTOM BUTTON TEXT (NOT REQUIRED TO SET "customTheme: true" TO USE THESE )
+          - entity: fan.sunroom_fan
+            type: custom:fan-control-entity-row
+            name: Sunroom Fan Custom Custom
+            customHiText: me
+            customLowText: do
+            customMedText: re
+            customOffText: not
   ```
 
 This is with the default Lovelace frontend theme set:
