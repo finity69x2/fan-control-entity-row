@@ -16,7 +16,7 @@ Copy the fan-control-entity-row.js file to the appropriate folder in your Home A
 
 Place the following in your "resources" section in your lovelace configuration (updating the localation to where you placed the above file):
 
-  ```
+  ```yaml
     - url: /local/fan-control-entity-row.js
       type: module
   ```
@@ -50,7 +50,7 @@ The optional "sendStateWithSpeed" config entry is only needed to be set to true 
 
 <b>Comfguration Examples:</b>
     
-  ```
+  ```yaml
     cards:
       - type: entities
         title: Fans
