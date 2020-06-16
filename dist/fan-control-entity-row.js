@@ -21,7 +21,7 @@ class CustomFanRow extends Polymer.Element {
 		    text-align: center;
 	            float: right !important;
 		    padding: 1px;
-                    cursor: pointer;
+		    cursor: pointer;
 		}
 				
                 </style>
