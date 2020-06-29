@@ -46,7 +46,7 @@ Then to use this in a card place the following in your entity card:
 
 The values for the colors can be any valid color string in "HEX", "RGB" or by color name.
 
-*NOTE: The speeds need to use all lowercase letters. The only time this should be a concern is if you are using a template fan. Be sure to make your speeds all lowercase in the fan configuration.
+*NOTE: The speeds that your fan uses in Home Assistant need to use all lowercase letters. The only time this should be a concern is if you are using a template fan. Be sure to make your speeds all lowercase in the fan configuration.
 
 The optional "sendStateWithSpeed" config entry is only needed to be set to true if for some reason your fan needs the state command of "on" to be sent along with the desired speed command. As far as I know this is only needed for use with fans flashed with the ESPHome Firmware.
 
