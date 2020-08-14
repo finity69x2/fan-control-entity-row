@@ -1,5 +1,7 @@
 Changes:
 
+- v1.8 - BREAKING CHANGES! - I modified the options to be consistent with my other control rows and changed the default button order. I also added the option to reverse the button order.
+
 - v1.6 - added the ability to customize the text for the buttons. defaults to "OFF, LOW, MED, HIGH"
 
 This is an element to add a fan control row to Home Assistant for 3-speed fans.
@@ -33,7 +35,7 @@ Then to use this in a card place the following in your entity card:
 | customIsOnLowColor | String | No | '#43A047' | Sets the color of the 'Low' button if fan is on low |
 | customIsOnMedColor | String | No | '#43A047' | Sets the color of the 'Med' button if fan is on Medium |
 | customIsOnHiColor | String | No | '#43A047' | Sets the color of the 'High' button if fan is on high |
-| customIsOffSpdColor | String | No | '#759aaa' | Sets the color of the buttons if that selection is off |
+| buttonInactiveColor | String | No | '#759aaa' | Sets the color of the buttons if that selection is off |
 | customOffText | String | No | 'OFF' | Sets the text of the "off" button |
 | customLowText | String | No | 'LOW' | Sets the text of the "low" speed button |
 | customMedText | String | No | 'MED' | Sets the text of the "medium" speed button |
@@ -66,12 +68,13 @@ The optional "sendStateWithSpeed" config entry is only needed to be set to true 
           - entity: fan.sunroom_fan
             type: custom:fan-control-entity-row
             name: Sunroom Fan Custom Custom
+            reverseButtons: true
             customTheme: true
-            customIsOnLowColor: 'rgb(255, 0, 0)'
-            customIsOnMedColor: '#888888'
-            customIsOnHiColor: '#222222'
-            customIsOffSpdColor: '#aaaaaa'
-            customIsOffColor: 'purple'
+            isOnLowColor: 'rgb(255, 0, 0)'
+            isOnMedColor: '#888888'
+            isOnHiColor: '#222222'
+            buttonInactiveColor: '#aaaaaa'
+            isOffColor: 'purple'
         ## USE THIS CONFIG FOR USE WITH THE ESPHOME FIRMWARE (ALONG WITHE THE THEME SETTING ABOVE IF DESIRED)
           - entity: fan.master_bedroom_fan
             type: custom:fan-control-entity-row
