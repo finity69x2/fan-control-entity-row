@@ -31,10 +31,10 @@ Then to use this in a card place the following in your entity card:
 | name | String | No | none | A custom name for the entity in the row |
 | customTheme | Boolean | No | false | set to true to use a custom theme |
 | sensStateWithSpeed | Boolean | No | false | Used only for certain firmware that requires the Statre command be sent with the speed command  |
-| customIsOffColor | String | No | '#f44c09' | Sets the color of the 'Off' button if fan is off |
-| customIsOnLowColor | String | No | '#43A047' | Sets the color of the 'Low' button if fan is on low |
-| customIsOnMedColor | String | No | '#43A047' | Sets the color of the 'Med' button if fan is on Medium |
-| customIsOnHiColor | String | No | '#43A047' | Sets the color of the 'High' button if fan is on high |
+| isOffColor | String | No | '#f44c09' | Sets the color of the 'Off' button if fan is off |
+| isOnLowColor | String | No | '#43A047' | Sets the color of the 'Low' button if fan is on low |
+| isOnMedColor | String | No | '#43A047' | Sets the color of the 'Med' button if fan is on Medium |
+| isOnHiColor | String | No | '#43A047' | Sets the color of the 'High' button if fan is on high |
 | buttonInactiveColor | String | No | '#759aaa' | Sets the color of the buttons if that selection is off |
 | customOffText | String | No | 'OFF' | Sets the text of the "off" button |
 | customLowText | String | No | 'LOW' | Sets the text of the "low" speed button |
