@@ -1,6 +1,6 @@
 Changes:
 
-- v1.8 - BREAKING CHANGES! - I modified the options to be consistent with my other control rows and changed the default button order. I also added the option to reverse the button order.
+- v1.8 - BREAKING CHANGES! - I modified the options to be consistent with my other control rows and changed the default button order. I also added the option to reverse the button order. See the readme.md for updated coinfiguration options.
 
 - v1.6 - added the ability to customize the text for the buttons. defaults to "OFF, LOW, MED, HIGH"
 
