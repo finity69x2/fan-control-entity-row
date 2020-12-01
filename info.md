@@ -1,5 +1,7 @@
 Changes:
 
+- v2.0 - added the ability to hide the medium speed button for use with a two speed fan.
+
 - v1.8 & v1.9 - BREAKING CHANGES! - I modified the options to be consistent with my other control rows and changed the default button order. I also added the option to reverse the button order. See the readme.md for updated coinfiguration options.
 
 - v1.6 - added the ability to customize the text for the buttons. defaults to "OFF, LOW, MED, HIGH"
@@ -30,6 +32,8 @@ Then to use this in a card place the following in your entity card:
 | type | String | Yes | none | custom:fan-control-entity-row |
 | name | String | No | none | A custom name for the entity in the row |
 | customTheme | Boolean | No | false | set to true to use a custom theme |
+| reverseButtons | Boolean | No | false | Set to true to reverse the button order |
+| isTwoSpeedFan | Boolean | No | false | Set to true to hide the Medium Speed button |
 | sensStateWithSpeed | Boolean | No | false | Used only for certain firmware that requires the Statre command be sent with the speed command  |
 | isOffColor | String | No | '#f44c09' | Sets the color of the 'Off' button if fan is off |
 | isOnLowColor | String | No | '#43A047' | Sets the color of the 'Low' button if fan is on low |
