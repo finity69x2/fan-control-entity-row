@@ -4,6 +4,10 @@
 
 It uses the code that can be found in my fan control package @ https://github.com/finity69x2/Home-Assistant/blob/master/packages/fan_package.yaml
 
+UPDATE:
+
+I've added the ability to hide the medium speed button to turn it into a two speed fan control, as well. To use it in this mode then your fan speeds must be designated low and high since it simply removes the medium speed button.
+
 Installation:
 
 The easiest way to install this is to use the Home Assistant Community Store (HACS) in Home Assistant.
@@ -32,6 +36,8 @@ Then to use this in a card place the following in your entity card:
 | type | String | Yes | none | custom:fan-control-entity-row |
 | name | String | No | none | A custom name for the entity in the row |
 | customTheme | Boolean | No | false | set to true to use a custom theme |
+| reverseButtons | Boolean | No | false | Set to true to reverse the button order |
+| isTwoSpeedFan | Boolean | No | false | Set to true to hide the Medium Speed button |
 | sendStateWithSpeed | Boolean | No | false | Used only for certain firmware that requires the State command be sent with the Speed command  |
 | isOffColor | String | No | '#f44c09' | Sets the color of the 'Off' button if fan is off |
 | isOnLowColor | String | No | '#43A047' | Sets the color of the 'Low' button if fan is on low |
