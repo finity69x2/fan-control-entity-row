@@ -48,6 +48,7 @@ Then to use this in a card place the following in your entity card:
 | customLowText | String | No | 'LOW' | Sets the text of the "low" speed button |
 | customMedText | String | No | 'MED' | Sets the text of the "medium" speed button |
 | customHiText | String | No | 'HIGH' | Sets the text of the "High" speed button |
+| state_color | Boolean | No | false | Sets the icon color of the entity to reflect the current state |
 
 
 The values for the colors can be any valid color string in "HEX", "RGB" or by color name.
