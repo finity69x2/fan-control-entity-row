@@ -39,6 +39,8 @@ Then to use this in a card place the following in your entity card:
 | reverseButtons | Boolean | No | false | Set to true to reverse the button order |
 | isTwoSpeedFan | Boolean | No | false | Set to true to hide the Medium Speed button |
 | sendStateWithSpeed | Boolean | No | false | Used only for certain firmware that requires the State command be sent with the Speed command  |
+| width | String | No | 30px | A custom width for the buttons |
+| height | String | No | 30px | A custom height for the buttons |
 | isOffColor | String | No | '#f44c09' | Sets the color of the 'Off' button if fan is off |
 | isOnLowColor | String | No | '#43A047' | Sets the color of the 'Low' button if fan is on low |
 | isOnMedColor | String | No | '#43A047' | Sets the color of the 'Med' button if fan is on Medium |
@@ -99,6 +101,8 @@ The optional "sendStateWithSpeed" config entry is only needed to be set to true 
             customLowText: do
             customMedText: re
             customOffText: not
+            width: '15px'
+            height: '15px'
   ```
 
 This is with the default Lovelace frontend theme set:
