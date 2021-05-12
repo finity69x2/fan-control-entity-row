@@ -2,7 +2,7 @@
 
 ## This is an element to add a fan control row to Home Assistant.
 
-## This plugin is only valid for use with Home Assistant Version 2021.2.x and before. For HA versions 2021.3.x and later use fan-percent-button-row or fan-mode-button-row.
+## This plugin is only valid for use with fans that still use a speed list in the fan configuration. That fan control model is deprecated in versions of Home Assistant 2021.3.x and later. For HA versions 2021.3.x and later use fan-percent-button-row or fan-mode-button-row if your fan has been updated to use the new control methods.
 
 It uses the code that can be found in my fan control package @ https://github.com/finity69x2/Home-Assistant/blob/master/packages/fan_package.yaml
 
