@@ -34,18 +34,20 @@ Then to use this in a card place the following in your entity card:
 | customTheme | Boolean | No | false | set to true to use a custom theme |
 | reverseButtons | Boolean | No | false | Set to true to reverse the button order |
 | isTwoSpeedFan | Boolean | No | false | Set to true to hide the Medium Speed button |
-| sensStateWithSpeed | Boolean | No | false | Used only for certain firmware that requires the Statre command be sent with the speed command  |
+| hideOff | Boolean | No | false | Set to true to hide the Off button |
+| sendStateWithSpeed | Boolean | No | false | Used only for certain firmware that requires the State command be sent with the Speed command  |
 | width | String | No | 30px | A custom width for the buttons |
 | height | String | No | 30px | A custom height for the buttons |
 | isOffColor | String | No | '#f44c09' | Sets the color of the 'Off' button if fan is off |
 | isOnLowColor | String | No | '#43A047' | Sets the color of the 'Low' button if fan is on low |
 | isOnMedColor | String | No | '#43A047' | Sets the color of the 'Med' button if fan is on Medium |
-| isOnHiColor | String | No | '#43A047' | Sets the color of the 'High' button if fan is on high |
-| buttonInactiveColor | String | No | '#759aaa' | Sets the color of the buttons if that selection is off |
+| isOnHiColor | String | No | '#43A047' | Sets the color of the 'Hi' button if fan is on high |
+| buttonInactiveColor | String | No | '#759aaa' | Sets the color of the the buttons if that selection is off |
 | customOffText | String | No | 'OFF' | Sets the text of the "off" button |
 | customLowText | String | No | 'LOW' | Sets the text of the "low" speed button |
 | customMedText | String | No | 'MED' | Sets the text of the "medium" speed button |
 | customHiText | String | No | 'HIGH' | Sets the text of the "High" speed button |
+| state_color | Boolean | No | false | Sets the icon color of the entity to reflect the current state |
 
 
 The values for the colors can be any valid color string in "HEX", "RGB" or by color name.
